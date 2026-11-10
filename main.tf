@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-resourc "local_file" "hello" {
-  content  = "This will break!"
+resource "local_file" "hello" {
+  content  = "Automated deployment from GitHub Actions!"
   filename = "${path.module}/hello.txt"
 }
