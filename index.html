@@ -1,14 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Terraform Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Terraform Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0d1117; color: #58a6ff; font-family: sans-serif; text-align: center; margin-top: 20vh; }
-        h1 { font-size: 3rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Animated Gradient Background */
+            background: linear-gradient(-45deg, #1a0b1c, #3a1c3d, #24243e, #1a1a2e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Frosted Glass Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            max-width: 90%;
+            width: 400px;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: -webkit-linear-gradient(45deg, #ff9a9e, #fecfef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #d1d1d1;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Floating Heart Animation */
+        .heart {
+            font-size: 4rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(255, 154, 158, 0.1);
+            color: #ff9a9e;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
-    <h1>🚀 It Worked!</h1>
-    <p style="color: white;">Hosted on GitHub Pages via Terraform.</p>
+    <div class="glass-card">
+        <div class="heart">💝</div>
+        <h1>Glad to see you!</h1>
+        <p>This beautiful website was provisioned using <strong>Terraform</strong> and hosted seamlessly on GitHub Pages.</p>
+        <div class="badge">Built from a Mobile Phone 📱</div>
+    </div>
 </body>
 </html>
