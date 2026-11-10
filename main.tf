@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-resource "local_file" "hello" {
-  content  = "Hello from Terraform in Codespaces!"
+resourc "local_file" "hello" {
+  content  = "This will break!"
   filename = "${path.module}/hello.txt"
 }
